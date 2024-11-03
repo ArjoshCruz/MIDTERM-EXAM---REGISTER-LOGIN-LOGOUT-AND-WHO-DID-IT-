@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+}
+
+body {
+    overflow-x: hidden;
+}
+header {
+    background-color: #85caff;
+    border-bottom: 2px solid rgb(170, 170, 170);
+    position: relative;
+}
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    padding: 40px 0px 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    font-size: 50px;
+}
+.A {
+    color: #ffb3ba;
+}
+.B {
+    color: #ffffba;
+}
+.C {
+    color: #baffc9;
+}
+h2 {
+    padding-bottom: 40px;
+    font-size: 30px;
+}
+.admin-action {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+
+    display: flex;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    display: inline-block;
+    margin-right: 20px;
+}
+ul a {
+ 
+    text-decoration: underline; 
+    color: inherit;
+}
+
+/* Start of Main */
+.form-div {
+    background-color: rgb(209, 243, 255);
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+
+    position: relative;
+
+}
+
+.cloud, .sun {
+    position: absolute;
+    z-index: 1;
+}
+
+.sun:nth-child(1){
+    width: 100px;
+    top: 10px;
+    opacity: 0.95;
+    animation: wind 120s linear infinite reverse;
+}
+
+.cloud:nth-child(1){
+    width: 200px;
+    top: 120px;
+    opacity: 0.5;
+    animation: wind 120s linear infinite reverse;
+}
+
+.cloud:nth-child(2) {
+    width: 200px;
+    top: 30px;
+    opacity: 0.99;
+    z-index: 2;
+
+    animation: wind 40s linear infinite reverse;
+}
+
+.cloud:nth-child(3) {
+    width: 150px;
+    top: 120px;
+    opacity: 0.95;
+    z-index: 2;
+
+    animation: wind 20s linear infinite reverse;
+}
+.cloud:nth-child(4) {
+    width: 50px;
+    top: 100px;
+    opacity: 0.50;
+    z-index: 1;
+
+    animation: wind 80s linear infinite reverse;
+}
+.cloud:nth-child(5) {
+    width: 50px;
+    top: 150px;
+    opacity: 0.50;
+    z-index: 1;
+
+    animation: wind 50s linear infinite reverse;
+}
+
+form {
+    background-color: white;
+    padding:40px 50px;
+    border-radius: 12px;
+    z-index: 99;
+    
+}
+
+p {
+    text-align: center;
+}
+
+label {
+    font-size: 20px;
+}
+
+input {
+    padding: 4px 10px;
+}
+
+.input-data {
+    margin: 22px;
+    
+}
+.btn {
+    text-align: center;
+}
+.submit-btn {
+    border: none;
+    border-radius: 20px;
+    width: 220px;
+    background-color: #ffb3ba;
+    padding: 10px;
+    transition: 0.25s;
+
+    margin-top: 10px;
+}
+.submit-btn:hover {
+    cursor: pointer;
+    background-color: #ff707e;
+    color: white;
+}
+.back-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+
+    border: none;
+    border-radius: 20px;
+    width: 100px;
+    background-color: rgb(97, 97, 70);
+    padding-top: 50px;
+    transition: 0.25s;
+
+    z-index: 99;
+    display: block;
+}
+.back-btn:hover {
+    cursor: pointer;
+    background-color: rgb(51, 51, 37);
+}
+/* End of Main */
+
+/* Start of Table */
+.table {
+    display: flex;
+    justify-content: center;
+
+    background-color: rgb(161, 249, 161);
+
+    margin: 0;
+    padding: 0 0 100px;
+}
+
+table {
+    font-family: arial;
+    border-collapse: collapse;
+    
+}
+  
+td, th {
+    border: 1px solid #000000;
+    text-align: left;
+}
+
+th {
+    background-color: #1676d6;
+    color: #f8f9fa;
+    font-weight: bold;
+    padding: 5px 30px;
+}
+td {
+    background-color: #f8f9fa;
+    padding-left: 12px;
+}
+/* End of Records */
+
+
+/* Wind */
+@keyframes wind {
+    from{left: -300px;}
+    to{left: 100%;}
+}

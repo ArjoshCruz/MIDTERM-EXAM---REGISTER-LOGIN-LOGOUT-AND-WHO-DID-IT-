@@ -1,0 +1,45 @@
+<?php require_once '../core/models.php'?>
+<?php require_once '../core/handleForms.php'?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABC Tutoring School</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/login.css"></head>
+<body>
+    <header>
+        <h1><span class="A">A</span><span class="B">B</span><span class="C">C</span> Tutoring School!</h1>
+    </header>
+    
+    <section class="form-div">
+    <h2><strong>LOGIN</strong></h2>
+        <form action="../core/handleForms.php" method="POST">
+            <p>
+                <div class="input-container">
+                    <i class="fas fa-user"></i>
+                    <input type="text" placeholder="Username" name="username" required>
+                </div>
+
+            </p>
+            <p>
+                <div class="input-container">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+            </p>
+            <p class="btn">
+                <input class="submit-btn" type="submit" value="Login" name="loginUserBtn">
+            </p>
+        </form>
+        <p>Don't have an account? You may register <a href="register.php">here</a></p>
+    </section>
+
+    <?php if (isset($_SESSION['message'])) { ?>
+    <h1 style="color: red;"><?php echo $_SESSION['message']?></h1>
+    <?php }?>
+    <?php unset($_SESSION['message']);?>
+</body>
+</html>
